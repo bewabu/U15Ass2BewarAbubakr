@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | Whiskers' Cafe</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="scripts/javascript.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER / NAV -->
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="https://primary.jwwb.nl/public/z/g/a/temp-jemqpwhvhgjwzhvmgqkt/ai-logo-99720df30192-standard.png" alt="Whiskers' Cafe logo">
+                <span class="nav-brand-name">Whiskers' Cafe</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our-cats.html">Our Cats</a></li>
+                    <li><a href="why-book.html">Why Book?</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="bookings.html" class="active">Bookings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO (accent/gold) -->
+    <section class="page-hero page-hero-accent">
+        <h1>Plan your purr-fect visit</h1>
+        <p>Welcome to Whiskers' Cafe! We can't wait for you to meet our lovely feline friends. Find all the information you need to book your visit and ensure a wonderful experience.</p>
+    </section>
+
+    <!-- BOOKING INFO -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Important booking information</h2>
+            <p class="section-subtitle">To make your visit as smooth and enjoyable as possible, please take a moment to review the following details before you book.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="https://primary.jwwb.nl/pexels/13/13685389.jpeg" alt="Session duration">
+                    <div class="card-body">
+                        <h3>Session duration</h3>
+                        <p>All sessions at Whiskers' Cafe are one hour long, giving you plenty of time to relax and interact with our cats.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://primary.jwwb.nl/pexels/13/13856571.jpeg" alt="Opening hours">
+                    <div class="card-body">
+                        <h3>Opening hours</h3>
+                        <p>Our cafe is open from 1pm to 9pm daily, ready to welcome you for a delightful experience.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://primary.jwwb.nl/pexels/29/29370081.jpeg" alt="Age restrictions">
+                    <div class="card-body">
+                        <h3>Age restrictions</h3>
+                        <p>Children under 13 must be accompanied by a parent or guardian to ensure a safe and enjoyable environment for everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="section-shaded">
+        <div class="container">
+            <h2 class="section-title text-center">Book your visit</h2>
+            <p class="section-subtitle text-center">Fill in the form below to reserve your spot. We'll confirm your booking by email.</p>
+
+            <form id="booking-form" novalidate style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="booking-name">Full name *</label>
+                    <input type="text" id="booking-name" name="booking-name" required placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label for="booking-email">Email address *</label>
+                    <input type="email" id="booking-email" name="booking-email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="booking-date">Preferred date *</label>
+                    <input type="date" id="booking-date" name="booking-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="booking-time">Preferred time *</label>
+                    <select id="booking-time" name="booking-time" required>
+                        <option value="">-- Select a time --</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking-guests">Number of guests *</label>
+                    <select id="booking-guests" name="booking-guests" required>
+                        <option value="">-- Select --</option>
+                        <option value="1">1 guest</option>
+                        <option value="2">2 guests</option>
+                        <option value="3">3 guests</option>
+                        <option value="4">4 guests</option>
+                        <option value="5">5 guests</option>
+                        <option value="6">6+ guests (please contact us)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="booking-type">Session type</label>
+                    <select id="booking-type" name="booking-type">
+                        <option value="standard">Standard visit (1 hour)</option>
+                        <option value="extended">Extended purr session</option>
+                        <option value="private">Private hire</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm booking</button>
+                <p id="booking-feedback" style="margin-top: 1rem; font-weight: bold;"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <span>&copy; 2026 Whiskers' Cafe</span>
+            <span>Designed and developed for a college project</span>
+        </div>
+    </footer>
+
+</body>
+</html>
